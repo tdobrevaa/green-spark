@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* GreenSpark Eco-Friendly Color Palette */
+    --background: 120 20% 97%;
+    --foreground: 140 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 140 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 30% 15%;
+    --primary: 140 60% 22%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 120 30% 92%;
+    --secondary-foreground: 140 60% 22%;
+    --muted: 120 20% 94%;
+    --muted-foreground: 140 15% 45%;
+    --accent: 120 50% 85%;
+    --accent-foreground: 140 60% 22%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 120 20% 88%;
+    --input: 120 20% 88%;
+    --ring: 140 60% 22%;
+    --radius: 1rem;
+    
+    /* Custom GreenSpark Colors */
+    --forest: 140 60% 18%;
+    --forest-light: 140 50% 28%;
+    --leaf: 120 45% 55%;
+    --sage: 120 25% 85%;
+    --mint: 140 60% 95%;
+    --cream: 60 30% 97%;
+    --earth: 30 25% 45%;
+    --gold: 45 80% 55%;
+    
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+  }
+  
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  /* Mobile-safe area utilities */
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 20px);
+  }
+  
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  
+  /* Hide scrollbar utility */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  
+  /* Glassmorphism effect */
+  .glass {
+    @apply bg-white/80 backdrop-blur-xl;
+  }
+  
+  /* Gradient backgrounds */
+  .gradient-forest {
+    background: linear-gradient(135deg, hsl(140 60% 22%) 0%, hsl(140 50% 28%) 100%);
+  }
+  
+  .gradient-mint {
+    background: linear-gradient(180deg, hsl(140 60% 95%) 0%, hsl(120 30% 92%) 100%);
+  }
+  
+  /* Shadow utilities */
+  .shadow-soft {
+    box-shadow: 0 4px 20px -4px rgba(26, 71, 42, 0.12);
+  }
+  
+  .shadow-card {
+    box-shadow: 0 2px 12px -2px rgba(26, 71, 42, 0.08);
+  }
+  
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.4s ease-out;
+  }
+  
+  .animate-pulse-soft {
+    animation: pulseSoft 2s ease-in-out infinite;
+  }
+  
+  /* Text gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(140 60% 22%) 0%, hsl(140 50% 35%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseSoft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+/* Scanner animation */
+@keyframes scan {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
+}
+
+.scan-line {
+  animation: scan 2s linear infinite;
+}
+
+/* Circular progress animation */
+@keyframes progress {
+  from {
+    stroke-dashoffset: 283;
+  }
+}
+
+/* Bottom sheet slide animation */
+@keyframes slideUpSheet {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.sheet-enter {
+  animation: slideUpSheet 0.3s ease-out;
+}
