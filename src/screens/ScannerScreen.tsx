@@ -78,7 +78,7 @@ export const ScannerScreen: React.FC = () => {
     addScan({
       id: Date.now().toString(),
       name: 'Oat Matcha',
-      image: 'https://images.unsplash.com/photo-1515823664972-6d66e79bc394?w=100&h=100&fit=crop',
+      image: 'https://www.elizabethrider.com/wp-content/uploads/2021/06/oat-milk-matcha-latte-elizabeth-rider.jpeg',
       timestamp: 'Just now',
       pointsEarned: 20,
     });
@@ -265,7 +265,7 @@ export const ScannerScreen: React.FC = () => {
               <p className="text-muted-foreground mb-4">Oat Matcha scanned successfully</p>
               <div className="w-16 h-16 rounded-xl overflow-hidden mx-auto">
                 <img
-                  src=""
+                  src="https://www.elizabethrider.com/wp-content/uploads/2021/06/oat-milk-matcha-latte-elizabeth-rider.jpeg"
                   alt="Oat Matcha"
                   className="w-full h-full object-cover"
                 />
