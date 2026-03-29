@@ -16,6 +16,7 @@ import { useApp } from '@/context/AppContext';
 import type { TabType } from '@/types';
 import { cn } from '@/lib/utils';
 import logoImage from '@/images/logo.jpeg';
+import matchaImage from '@/images/matcha.jpeg';
 
 export const ScannerScreen: React.FC = () => {
   const [isScanning, setIsScanning] = useState(true);
@@ -264,7 +265,7 @@ export const ScannerScreen: React.FC = () => {
               <p className="text-muted-foreground mb-4">Oat Matcha scanned successfully</p>
               <div className="w-16 h-16 rounded-xl overflow-hidden mx-auto">
                 <img
-                  src="https://images.unsplash.com/photo-1515823664972-6d66e79bc394?w=100&h=100&fit=crop"
+                  src=""
                   alt="Oat Matcha"
                   className="w-full h-full object-cover"
                 />
@@ -288,7 +289,7 @@ export const ScannerScreen: React.FC = () => {
               className="flex-shrink-0 flex items-center gap-3 bg-white/10 backdrop-blur-md rounded-2xl p-3"
             >
               <img
-                src="https://images.unsplash.com/photo-1515823664972-6d66e79bc394?w=100&h=100&fit=crop"
+                src={matchaImage}
                 alt="Oat Matcha"
                 className="w-12 h-12 rounded-xl object-cover"
               />

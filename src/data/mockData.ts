@@ -33,8 +33,8 @@ export const partnerCafes: Cafe[] = [
     discount: '15% off with reusable cup',
     isFeatured: true,
     isOpen: true,
-    lat: 42.6977,
-    lng: 23.3219,
+    lat: 42.7154802,
+    lng: 23.3081086,
     address: 'bul. Vitosha 126, Sofia'
   },
   {
@@ -45,8 +45,8 @@ export const partnerCafes: Cafe[] = [
     distance: '0.8 km',
     description: 'Artisan coffee with eco-friendly packaging.',
     isOpen: true,
-    lat: 42.6947,
-    lng: 23.3259,
+    lat: 42.6973857,
+    lng: 23.3236999,
     address: 'ul. Gladstone 36, Sofia'
   },
   {
@@ -57,8 +57,8 @@ export const partnerCafes: Cafe[] = [
     distance: '1.2 km',
     description: 'Award-winning specialty coffee roasters.',
     isOpen: true,
-    lat: 42.7007,
-    lng: 23.3189,
+    lat: 42.6972976,
+    lng: 23.2997192,
     address: 'ul. Solunska 8, Sofia'
   },
   {
@@ -69,8 +69,8 @@ export const partnerCafes: Cafe[] = [
     distance: '1.5 km',
     description: 'Organic food and fair trade coffee.',
     isOpen: true,
-    lat: 42.6897,
-    lng: 23.3249,
+    lat: 42.6706475,
+    lng: 23.3205212,
     address: 'bul. Bulgaria 69, Sofia'
   },
   {
