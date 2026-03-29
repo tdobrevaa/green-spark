@@ -16,6 +16,7 @@ import type { Reward } from '@/types';
 import { cn } from '@/lib/utils';
 import { useApp } from '@/context/AppContext';
 import logoImage from '@/images/logo.jpeg';
+import { currentUser } from '@/data/mockData';
 
 export const RewardsScreen: React.FC = () => {
   const { setActiveTab, setIsModalOpen, user } = useApp();
